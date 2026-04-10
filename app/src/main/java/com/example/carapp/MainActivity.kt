@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.example.carapp.data.CarDatabase
 import com.example.carapp.data.CarRepository
 import com.example.carapp.ui.CarAppTheme
+import com.example.carapp.ui.MainScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
