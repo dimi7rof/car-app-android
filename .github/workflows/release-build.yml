@@ -24,14 +24,14 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --stacktrace
 
       - name: Create Release and Upload APK
         uses: softprops/action-gh-release@v2
         with:
           files: app/build/outputs/apk/debug/app-debug.apk
           name: Release ${{ github.ref_name }}
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
           draft: false
           prerelease: false
         env:
