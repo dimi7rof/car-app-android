@@ -8,8 +8,14 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
-    open-pull-requests-limit: 5
-    reviewers: []
+    # Limit to a single open PR and group all action updates into one PR
+    open-pull-requests-limit: 1
+    labels:
+      - "dependencies"
+    groups:
+      all-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -19,5 +25,11 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
-    open-pull-requests-limit: 5
-    reviewers: []
+    # Limit to a single open PR and group all action updates into one PR
+    open-pull-requests-limit: 1
+    labels:
+      - "actions"
+    groups:
+      all-actions:
+        patterns:
+          - "*"
